@@ -2,7 +2,7 @@
 set -e
 
 ## declare an array variable
-declare -a arr=("Stock" "Payment" "Sale" "Discount" "Purchase" "Waste" "Expense" "Supplier" "Customer" "Quotation" "Employee" "Payroll")
+declare -a arr=("Stock" "Sale" "Purchase" "Waste" "Expense" "Supplier" "Customer" "Quotation" "Discount" "Employee" "Payroll" "Category" "Payment")
 
 ## now loop through the above array
 for i in "${arr[@]}"
