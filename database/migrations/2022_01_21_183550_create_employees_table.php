@@ -19,7 +19,7 @@ class CreateEmployeesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('payroll_number');
-            $table->integer('phone');
+            $table->string('phone');
             $table->string('email')->nullable();
             $table->string('designation');
             $table->integer('id_number');
@@ -28,7 +28,7 @@ class CreateEmployeesTable extends Migration
             $table->string('nhif_no')->nullable();
             $table->string('nssf_no')->nullable();
             $table->integer('salary')->nullable();
-            $table->integer('hourly_rate')->nullable();
+            $table->integer('daily_rate')->nullable();
             $table->string('payment_type');
             $table->softDeletes();
             $table->timestamps();

@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Employee;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use App\Models\Customer;
@@ -36,7 +37,7 @@ class SaleFactory extends Factory
             'given_amount' => $this->faker->numberBetween(-10000, 10000),
             'change_amount' => $this->faker->numberBetween(-10000, 10000),
             'customer_id' => Customer::factory(),
-            'user_id' => User::factory(),
+            'employee_id' => Employee::factory(),
         ];
     }
 }

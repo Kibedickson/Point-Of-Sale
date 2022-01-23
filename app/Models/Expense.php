@@ -20,7 +20,7 @@ class Expense extends Model
         'date',
         'description',
         'amount',
-        'user_id',
+        'employee_id',
     ];
 
     /**
@@ -31,11 +31,11 @@ class Expense extends Model
     protected $casts = [
         'id' => 'integer',
         'date' => 'date',
-        'user_id' => 'integer',
+        'employee_id' => 'integer',
     ];
 
-    public function user(): BelongsTo
+    public function employee(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Employee::class);
     }
 }

@@ -3,7 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ExpenseResource\Pages;
-use App\Filament\Resources\ExpenseResource\RelationManagers;
+use App\Models\Employee;
 use App\Models\Expense;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -21,7 +21,18 @@ class ExpenseResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\Textarea::make('description')
+                    ->required(),
+                Forms\Components\DatePicker::make('date')
+                    ->required(),
+                Forms\Components\TextInput::make('amount')
+                    ->required()
+                    ->integer(),
+                Forms\Components\Select::make('employee_id')
+                    ->label('Employee')
+                    ->required()
+                    ->options(Employee::all()->pluck('name', 'id'))
+                    ->searchable(),
             ]);
     }
 
@@ -29,7 +40,16 @@ class ExpenseResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('employee.name'),
+                Tables\Columns\TextColumn::make('description'),
+                Tables\Columns\TextColumn::make('amount'),
+                Tables\Columns\TextColumn::make('date')->date(),
+            ])
+            ->pushActions([
+                Tables\Actions\LinkAction::make('delete')
+                    ->action(fn(Expense $record) => $record->delete())
+                    ->requiresConfirmation()
+                    ->color('danger'),
             ])
             ->filters([
                 //

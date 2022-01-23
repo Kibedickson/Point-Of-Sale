@@ -22,7 +22,7 @@ class Waste extends Model
         'quantity',
         'total',
         'description',
-        'user_id',
+        'employee_id',
         'stock_id',
     ];
 
@@ -34,13 +34,13 @@ class Waste extends Model
     protected $casts = [
         'id' => 'integer',
         'date' => 'date',
-        'user_id' => 'integer',
+        'employee_id' => 'integer',
         'stock_id' => 'integer',
     ];
 
-    public function user(): BelongsTo
+    public function employee(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Employee::class);
     }
 
     public function stock(): BelongsTo

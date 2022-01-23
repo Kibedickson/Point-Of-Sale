@@ -21,7 +21,16 @@ class CustomerResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('email')
+                    ->email()
+                    ->nullable()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('phone')
+                    ->integer()
+                    ->required(),
             ]);
     }
 
@@ -29,7 +38,15 @@ class CustomerResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('email'),
+                Tables\Columns\TextColumn::make('phone')
+            ])
+            ->pushActions([
+                Tables\Actions\LinkAction::make('delete')
+                    ->action(fn (Customer $record) => $record->delete())
+                    ->requiresConfirmation()
+                    ->color('danger'),
             ])
             ->filters([
                 //

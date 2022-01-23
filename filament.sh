@@ -8,5 +8,7 @@ declare -a arr=("Stock" "Sale" "Purchase" "Waste" "Expense" "Supplier" "Customer
 for i in "${arr[@]}"
 do
    echo "$i"
-   php artisan make:filament-resource "$i" --generate
+#   php artisan make:filament-resource "$i" --generate
+#   php artisan make:filament-page View"$i" --resource="$i"Resource
+
 done

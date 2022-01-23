@@ -28,7 +28,7 @@ class Sale extends Model
         'given_amount',
         'change_amount',
         'customer_id',
-        'user_id',
+        'employee_id',
     ];
 
     /**
@@ -41,7 +41,7 @@ class Sale extends Model
         'date' => 'date',
         'type' => 'integer',
         'customer_id' => 'integer',
-        'user_id' => 'integer',
+        'employee_id' => 'integer',
     ];
 
     public function customer(): BelongsTo
@@ -49,9 +49,9 @@ class Sale extends Model
         return $this->belongsTo(Customer::class);
     }
 
-    public function user(): BelongsTo
+    public function employee(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Employee::class);
     }
 
     public function payments(): BelongsToMany

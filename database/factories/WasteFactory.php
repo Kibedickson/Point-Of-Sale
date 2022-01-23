@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Employee;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use App\Models\Stock;
@@ -30,7 +31,7 @@ class WasteFactory extends Factory
             'quantity' => $this->faker->numberBetween(-10000, 10000),
             'total' => $this->faker->numberBetween(-10000, 10000),
             'description' => $this->faker->text,
-            'user_id' => User::factory(),
+            'employee_id' => Employee::factory(),
             'stock_id' => Stock::factory(),
         ];
     }

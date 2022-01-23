@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Employee;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use App\Models\Expense;
@@ -27,7 +28,7 @@ class ExpenseFactory extends Factory
             'date' => $this->faker->date(),
             'description' => $this->faker->text,
             'amount' => $this->faker->numberBetween(-10000, 10000),
-            'user_id' => User::factory(),
+            'employee_id' => Employee::factory(),
         ];
     }
 }

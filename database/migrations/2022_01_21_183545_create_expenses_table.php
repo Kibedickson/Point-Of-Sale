@@ -20,7 +20,7 @@ class CreateExpensesTable extends Migration
             $table->date('date');
             $table->string('description');
             $table->integer('amount');
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('employee_id')->constrained();
             $table->softDeletes();
             $table->timestamps();
         });
