@@ -17,16 +17,22 @@
             </div>
 
             <div class="mt-4 flex justify-between">
-                <select class="pr-4 focus:ring-indigo-500 focus:border-indigo-500 block px-4 sm:text-sm border-gray-300 rounded-md">
+                <select
+                    class="pr-4 focus:ring-indigo-500 focus:border-indigo-500 block px-4 sm:text-sm border-gray-300 rounded-md">
                     <option value="" selected disabled>Waiter</option>
                     @foreach($employees as $employee)
-                        <option wire:key="{{ $employee->id }}" class="pb-4 text-gray-800 font-medium text-base border-bg-red-500" value="{{ $employee->id }}">{{ $employee->name }}</option>
+                        <option wire:key="{{ $employee->id }}"
+                                class="pb-4 text-gray-800 font-medium text-base border-bg-red-500"
+                                value="{{ $employee->id }}">{{ $employee->name }}</option>
                     @endforeach
                 </select>
-                <select class="pl-4 focus:ring-indigo-500 focus:border-indigo-500 block px-4 sm:text-sm border-gray-300 rounded-md">
+                <select
+                    class="pl-4 focus:ring-indigo-500 focus:border-indigo-500 block px-4 sm:text-sm border-gray-300 rounded-md">
                     <option value="" selected disabled>Customer</option>
                     @foreach($employees as $employee)
-                        <option wire:key="{{ $employee->id }}" class="pb-4 text-gray-800 font-medium text-base border-bg-red-500" value="{{ $employee->id }}">{{ $employee->name }}</option>
+                        <option wire:key="{{ $employee->id }}"
+                                class="pb-4 text-gray-800 font-medium text-base border-bg-red-500"
+                                value="{{ $employee->id }}">{{ $employee->name }}</option>
                     @endforeach
                 </select>
             </div>
@@ -58,7 +64,8 @@
                                             <div class="text-gray-700 text-base font-medium">
                                                 <h3>Qty: {{ $item->id }}</h3>
                                             </div>
-                                            <span class="hover:cursor-pointer hover:ring-2 hover:ring-indigo-500 rounded-full p-1">
+                                            <span
+                                                class="hover:cursor-pointer hover:ring-2 hover:ring-indigo-500 rounded-full p-1">
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
                                                      viewBox="0 0 24 24" stroke="currentColor">
                                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -66,7 +73,8 @@
                                                           d="M12 4v16m8-8H4"/>
                                                 </svg>
                                             </span>
-                                            <span class="hover:cursor-pointer hover:ring-2 hover:ring-indigo-500 rounded-full p-1">
+                                            <span
+                                                class="hover:cursor-pointer hover:ring-2 hover:ring-indigo-500 rounded-full p-1">
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
                                                      viewBox="0 0 24 24" stroke="currentColor">
                                                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -76,7 +84,8 @@
                                         </div>
 
                                         <div class="flex">
-                                            <div class="font-medium text-base text-red-500 hover:text-red-600 hover:ring-2 hover:ring-red-300 p-1 rounded-md">
+                                            <div
+                                                class="font-medium text-base text-red-500 hover:text-red-600 hover:ring-2 hover:ring-red-300 p-1 rounded-md">
                                                 Remove
                                             </div>
                                         </div>
@@ -92,18 +101,20 @@
         <div class="border-t border-gray-200 py-6 px-4 sm:px-6 space-y-3">
             <div class="flex justify-between text-base font-medium text-gray-900">
                 <p>Discount</p>
-                <input class="focus:ring-indigo-500 focus:border-indigo-500 block px-4 sm:text-sm border-gray-300 rounded-md"
-                       type="number">
+                <input
+                    class="focus:ring-indigo-500 focus:border-indigo-500 block px-4 sm:text-sm border-gray-300 rounded-md"
+                    type="number">
             </div>
             <div class="flex justify-between text-base font-medium text-gray-900">
                 <p>Subtotal</p>
                 <p>$262.00</p>
             </div>
             <div class="mt-6">
-                <div class="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 hover:cursor-pointer">
+                <button
+                    class="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 hover:cursor-pointer">
                     Place
                     Order
-                </div>
+                </button>
             </div>
         </div>
     </div>

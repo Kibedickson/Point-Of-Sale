@@ -8,15 +8,17 @@
             </div>
 
             <div class="mt-6">
-                <input class="w-full focus:ring-indigo-500 focus:border-indigo-500 block px-4 sm:text-sm border-gray-300 rounded-md"
-                       type="text" placeholder="Search...">
+                <input
+                    class="w-full focus:ring-indigo-500 focus:border-indigo-500 block px-4 sm:text-sm border-gray-300 rounded-md"
+                    type="text" placeholder="Search...">
             </div>
 
             <div class="mt-6">
                 <div class="flow-root">
                     <div class="space-y-4">
                         <div class="flex">
-                            <div class="flex-1 flex flex-col rounded-lg bg-gray-100 hover:bg-gray-300 p-4 space-y-2 hover:opacity-75 hover:cursor-pointer">
+                            <div
+                                class="flex-1 flex flex-col rounded-lg bg-gray-100 hover:bg-gray-300 p-4 space-y-2 hover:opacity-75 hover:cursor-pointer">
                                 <div>
                                     <div class="flex justify-between text-base font-medium text-gray-900">
                                         <h3>
@@ -55,7 +57,8 @@
                             </div>
                         </div>
                         <div class="flex">
-                            <div class="flex-1 flex flex-col rounded-lg bg-gray-100 hover:bg-gray-300 p-4 space-y-2 hover:opacity-75 hover:cursor-pointer p-4 space-y-2">
+                            <div
+                                class="flex-1 flex flex-col rounded-lg bg-gray-100 hover:bg-gray-300 p-4 space-y-2 hover:opacity-75 hover:cursor-pointer p-4 space-y-2">
                                 <div>
                                     <div class="flex justify-between text-base font-medium text-gray-900">
                                         <h3>
@@ -100,12 +103,14 @@
 
         <div class="border-t border-gray-200 py-6 px-4 sm:px-6">
             <div class="mt-6 flex justify-between">
-                <div class="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 hover:cursor-pointer">
+                <button
+                    class="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 hover:cursor-pointer">
                     Invoice
-                </div>
-                <div class="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 hover:cursor-pointer">
+                </button>
+                <button
+                    class="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 hover:cursor-pointer">
                     Print Bill
-                </div>
+                </button>
             </div>
         </div>
     </div>
